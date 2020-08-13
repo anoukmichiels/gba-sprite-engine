@@ -14,7 +14,6 @@ private:
     std::unique_ptr<Background> background;
 
     std::unique_ptr<Sprite> pijl;
-    std::unique_ptr<Sprite> spook;
 
 
     u16 lastKeys = 0;

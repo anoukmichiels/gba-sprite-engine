@@ -23,7 +23,7 @@ std::vector<Background *> AboutScreen::backgrounds() {
     return {background.get()};}
 
 
-std::vector<Sprite *> AboutScreen::sprites() { return {spook.get(), pijl.get()};}
+std::vector<Sprite *> AboutScreen::sprites() { return {pijl.get()};}
 
 void AboutScreen::load() {
 
@@ -42,12 +42,7 @@ void AboutScreen::load() {
             .withAnimated(1, 40)
             .withLocation(5, 46)
             .buildPtr();
-    spook = spriteBuilder
-            .withData(wit_spook_1Tiles, sizeof(wit_spook_1Tiles))
-            .withSize(SIZE_32_32)
-            .withAnimated(6, 8)
-            .withLocation(12, 56)
-            .buildPtr();
+
 }
 
 void AboutScreen::tick(u16 keys) {
