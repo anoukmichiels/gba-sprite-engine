@@ -18,7 +18,6 @@ Speler::Speler() {
     magNaarLinks = true;
     magNaarBoven = true;
     magNaarOnder = true;
-    //tijd = 3;
 }
 
 int Speler::getScore() {
@@ -85,15 +84,12 @@ bool Speler::getAlGegooid() {
     return alGegooid;
 }
 
-void Speler::gooiDobbelsteen(int seed) {
+void Speler::gooiDobbelsteen(int ogen) {
     if (!alGegooid or alGegooid) {
 
-        std::uniform_int_distribution<unsigned> u(1,3);
-        std::default_random_engine e(seed*seed); //anders kwam je denk ik te vaak op hetzelfde. Nog eens fatsoenlijk uitzoeken hoe dit zit.
-        vakjesNogVerschuiven = u(e);
 
-        //tijd = timer.getSecs();
-        //vakjesNogVerschuiven = 1 + (rand() % 3);
+        vakjesNogVerschuiven = ogen;
+
         alGegooid = true;
         magNaarBoven = true;
         magNaarOnder = true;

@@ -44,7 +44,7 @@ public:
 
     void setAlGegooid(bool gegooid);
     bool getAlGegooid();
-    void gooiDobbelsteen(int seed);
+    void gooiDobbelsteen(int ogen);
     int getVakjesNogVerschuiven();
 
     bool getSpel1Gehaald();

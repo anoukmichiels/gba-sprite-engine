@@ -128,7 +128,7 @@ void GameScreen::load() {
     dobbelSteenSprite = spriteBuilder
             .withData(dobbelsteenTiles, sizeof(dobbelsteenTiles))
             .withSize(SIZE_32_32)
-            .withAnimated(3, 8)
+            .withAnimated(3, 6)
             .withLocation(200, 120)
             .buildPtr();
 
@@ -175,12 +175,13 @@ void GameScreen::tick(u16 keys) {
     }
     if (aanHetGooien) {
         if (!(keys & KEY_START) && (lastKeys & KEY_START)) {
-            int seed = engine->getTimer()->getTotalMsecs();
-            game->getSpeler()->gooiDobbelsteen(seed);
+
             dobbelSteenSprite->stopAnimating();
-            dobbelSteenSprite->animateToFrame(game->getSpeler()->getVakjesNogVerschuiven()-1);
+            game->getSpeler()->gooiDobbelsteen(dobbelSteenSprite->getCurrentFrame() + 1);
+
             aanHetGooien = false;
             updatePosition();
+            
         }
     }
     else {
