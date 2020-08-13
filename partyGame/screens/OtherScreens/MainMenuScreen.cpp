@@ -18,6 +18,9 @@
 #include "../../backgrounds/standard/gras.h"
 #include "../../backgrounds/standard/grasBackground.h"
 
+#include "../../sound/welcome.h"
+#include "../../sound/pickMe.h"
+
 
 void MainMenuScreen::load() {
     TextStream::instance().setText(std::string("Start Game"), 7, 5);
@@ -36,6 +39,11 @@ void MainMenuScreen::load() {
     backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(grasPal, sizeof(grasPal)));
     background = std::unique_ptr<Background>(new Background(1, grasTiles, sizeof(grasTiles), grasBackground, sizeof(grasBackground)));
     background->useMapScreenBlock(16);
+
+    //engine.get()->enqueueSound(welcome, sizeof(welcome), 44100);
+    //engine.get()->enqueueSound(pickMe, sizeof(pickMe), 44100);
+
+
 }
 
 std::vector<Background *> MainMenuScreen::backgrounds() {return {background.get()};}

@@ -21,6 +21,9 @@
 #include "../../Sprites/pijl.h"
 #include "../../Sprites/shared.h"
 
+#include "../../sound/pickMe.h"
+#include "../../sound/welcome.h"
+
 
 
 std::vector<Background *> PlayerSelectScreen::backgrounds() {return {background.get()};}
@@ -57,6 +60,11 @@ void PlayerSelectScreen::load() {
     backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(grasPal, sizeof(grasPal)));
     background = std::unique_ptr<Background>(new Background(1, grasTiles, sizeof(grasTiles), grasBackground, sizeof(grasBackground)));
     background->useMapScreenBlock(20);
+
+    //engine.get()->enqueueSound(pickMe, sizeof(pickMe), 44100);
+    engine.get()->enqueueSound(welcome, sizeof(welcome), 44100);
+
+
 }
 
 void PlayerSelectScreen::tick(u16 keys) {
