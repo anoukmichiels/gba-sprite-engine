@@ -1,7 +1,6 @@
 
 ## Spectral
-#### of or like a ghost
-#### of or concerning spectra or the spectrum
+#### of or like a ghost; of or concerning spectra or the spectrum
 
 Little ghosts Sebastiaan and Aoife return from an adventure to find their town in total chaos. Three ghastly ghosts have stolen the pretty white colour of all the other ghosts!
 Help our little ghosts get their friends' colour back by catching Rodrick Red, Gregory Green and Billy Blue. They are hidden in special places around the town that can only be reached through the red, green and blue stones.
