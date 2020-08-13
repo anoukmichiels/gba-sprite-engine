@@ -13,6 +13,11 @@ private:
     u16 lastKeys = 0;
     bool firstTick = true;
     std::unique_ptr<Background> background;
+    std::unique_ptr<Sprite> ghostFamily1;
+    std::unique_ptr<Sprite> ghostFamily2;
+    std::unique_ptr<Sprite> ghostFamily3;
+    std::unique_ptr<Sprite> ghostFamily4;
+
     int score;
 public:
     std::vector<Sprite *> sprites() override;

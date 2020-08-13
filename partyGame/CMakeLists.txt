@@ -54,6 +54,27 @@ add_executable(${PROJECT_NAME}.elf
         Sprites/shared.h
         Sprites/shared.c
 
+        Sprites/ghost_family_moving1.c
+        Sprites/ghost_family_moving1.h
+        Sprites/ghost_family_moving2.c
+        Sprites/ghost_family_moving2.h
+        Sprites/ghost_family_moving3.c
+        Sprites/ghost_family_moving3.h
+        Sprites/ghost_family_moving4.c
+        Sprites/ghost_family_moving4.h
+        Sprites/sharedEndScreen.h
+        Sprites/sharedEndScreen.c
+
+        Sprites/ghost_family_1.c
+        Sprites/ghost_family_1.h
+        Sprites/ghost_family_2.c
+        Sprites/ghost_family_2.h
+        Sprites/ghost_family_3.c
+        Sprites/ghost_family_3.h
+        Sprites/ghost_family_4.c
+        Sprites/ghost_family_4.h
+        Sprites/sharedGhost.h
+        Sprites/sharedGhost.c
 
 
         src/Game/Game.cpp src/Game/Game.h src/Game/Speler.cpp src/Game/Speler.h screens/GameScreen/GameScreen.cpp screens/GameScreen/GameScreen.h src/Minigames/Minigame1.cpp src/Minigames/Minigame1.h src/Minigames/Minigame2.cpp src/Minigames/Minigame2.h screens/MinigameScreens/MinigameScreen.cpp screens/MinigameScreens/MinigameScreen.h screens/OtherScreens/EndScreen.cpp screens/OtherScreens/EndScreen.h screens/OtherScreens/PlayerSelectScreen.cpp screens/OtherScreens/PlayerSelectScreen.h src/Minigames/Minigame.cpp src/Minigames/Minigame.h src/Minigames/Minigame3.cpp src/Minigames/Minigame3.h screens/MinigameScreens/Minigame1Screen.cpp screens/MinigameScreens/Minigame1Screen.h screens/MinigameScreens/Minigame2Screen.cpp screens/MinigameScreens/Minigame2Screen.h screens/MinigameScreens/Minigame3Screen.cpp screens/MinigameScreens/Minigame3Screen.h)
