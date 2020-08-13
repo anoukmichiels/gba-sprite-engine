@@ -21,7 +21,7 @@ MinigameScreen::MinigameScreen(std::shared_ptr<GBAEngine> engine, std::shared_pt
 void MinigameScreen::load() {
     backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(grasPal, sizeof(grasPal)));
     background = std::unique_ptr<Background>(new Background(1, grasTiles, sizeof(grasTiles), grasBackground, sizeof(grasBackground)));
-    background.get()->useMapScreenBlock(16);
+    background->useMapScreenBlock(16);
     engine->enqueueMusic(minigameSound, sizeof(minigameSound), 44100);
 
 }
@@ -41,12 +41,12 @@ void MinigameScreen::tick(u16 keys) {
         return;
     }
 
-    if (bezig) { // Als ik dit blok onder het andere zet geeft de updatePosition() problemen.
+    if (bezig) {
         minigame->beweeg();
         updatePosition();
     }
 
-    if (!(keys & KEY_START) && (lastKeys & KEY_START)) {// ENTER key, wait until released
+    if (!(keys & KEY_START) && (lastKeys & KEY_START)) {
         bezig = false;
         endScene();
     }

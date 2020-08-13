@@ -4,7 +4,6 @@
 
 #include <libgba-sprite-engine/sprites/sprite_builder.h>
 #include <libgba-sprite-engine/background/text_stream.h>
-#include <libgba-sprite-engine/effects/fade_out_scene.h>
 #include "Minigame1Screen.h"
 
 
@@ -12,7 +11,6 @@
 #include "../../Sprites/box.h"
 #include "../../Sprites/shared.h"
 
-#include "../GameScreen/GameScreen.h"
 
 #include "../../backgrounds/standard/gras.h"
 #include "../../backgrounds/standard/grasBackground.h"

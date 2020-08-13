@@ -199,7 +199,9 @@ void GameScreen::tick(u16 keys) {
             updatePosition();
         } else if (!(keys & KEY_START) && (lastKeys & KEY_START)) {
             aanHetGooien = true;
-            dobbelSteenSprite->animate();
+            if (!game->getSpeler()->getAlGegooid()) {
+                dobbelSteenSprite->animate();
+            }
         }
     }
     if (aanHetSpringen and (game->getHuidigVakje() == 4 or game->getHuidigVakje() == 5)) {
@@ -248,7 +250,7 @@ void GameScreen::tick(u16 keys) {
                     break;
 
                 case 6:
-                    if (game->getSpeler()->getSpel1Gehaald()/* and game->getSpeler()->getSpel2Gehaald() and game->getSpeler()->getSpel3Gehaald()*/) {
+                    if (game->getSpeler()->getSpel1Gehaald() and game->getSpeler()->getSpel2Gehaald() and game->getSpeler()->getSpel3Gehaald()) {
                         if (!engine->isTransitioning()) {
                             engine->transitionIntoScene(new EndScreen(engine, game->getSpeler()->getScore()), new FadeOutScene(2));
                         }
@@ -265,9 +267,9 @@ void GameScreen::tick(u16 keys) {
     }
     lastKeys = keys;
 }
-// Zoveel logica mag eigenlijk nooit in een update staan, wordt veel te vaak aangeroepen?
+
 void GameScreen::updatePosition() {
-    int bgX = 0; //Functies hieronder efficiënter schrijven!!
+    int bgX = 0;
     int spX = 0;
     int bgY = 0;
     int spY = 0;
