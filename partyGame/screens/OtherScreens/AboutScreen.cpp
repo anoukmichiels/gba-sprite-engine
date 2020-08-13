@@ -23,7 +23,7 @@ std::vector<Background *> AboutScreen::backgrounds() {
     return {background.get()};}
 
 
-std::vector<Sprite *> AboutScreen::sprites() { return {};}
+std::vector<Sprite *> AboutScreen::sprites() { return {pijl.get()};}
 
 void AboutScreen::load() {
 
@@ -35,10 +35,21 @@ void AboutScreen::load() {
     TextStream::instance().setText("Use the arrow keys to", 8, 1);
     TextStream::instance().setText(" * select a different option", 9, 1);
     TextStream::instance().setText(" * walk around the board", 10, 1);
+    TextStream::instance().setText("Back to the main menu", 17, 5);
+
 
     backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(grasPal, sizeof(grasPal)));
     background = std::unique_ptr<Background>(new Background(1, grasTiles, sizeof(grasTiles), grasBackground, sizeof(grasBackground)));
     background->useMapScreenBlock(16);
+
+    foregroundPalette = std::unique_ptr<ForegroundPaletteManager>(new ForegroundPaletteManager(sharedPal, sizeof(sharedPal)));
+    SpriteBuilder<Sprite> spriteBuilder;
+    pijl = spriteBuilder
+            .withData(pijlTiles, sizeof(pijlTiles))
+            .withSize(SIZE_32_32)
+            .withAnimated(1, 40)
+            .withLocation(5, 126)
+            .buildPtr();
 
 
 }
