@@ -17,6 +17,8 @@ private:
     std::unique_ptr<Sprite> ghostFamily2;
     std::unique_ptr<Sprite> ghostFamily3;
     std::unique_ptr<Sprite> ghostFamily4;
+    std::unique_ptr<Sprite> pijl;
+
 
     int score;
 public:

@@ -1,12 +1,12 @@
 
-//{{BLOCK(ghost_family_2)
+//{{BLOCK(pijlEnd)
 
 //======================================================================
 //
-//	ghost_family_2, 64x64@8, 
+//	pijlEnd, 32x32@8, 
 //	Transparent color : 00,00,00
-//	+ 64 tiles not compressed
-//	Total size: 4096 = 4096
+//	+ 16 tiles not compressed
+//	Total size: 1024 = 1024
 //
 //	Time-stamp: 2020-08-13, 22:42:21
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.6
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_GHOST_FAMILY_2_H
-#define GRIT_GHOST_FAMILY_2_H
+#ifndef GRIT_PIJLEND_H
+#define GRIT_PIJLEND_H
 
-#define ghost_family_2TilesLen 4096
-extern const unsigned int ghost_family_2Tiles[1024];
+#define pijlEndTilesLen 1024
+extern const unsigned int pijlEndTiles[256];
 
-#endif // GRIT_GHOST_FAMILY_2_H
+#endif // GRIT_PIJLEND_H
 
-//}}BLOCK(ghost_family_2)
+//}}BLOCK(pijlEnd)

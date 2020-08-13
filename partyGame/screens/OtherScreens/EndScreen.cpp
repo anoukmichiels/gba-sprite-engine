@@ -22,6 +22,7 @@
 #include "../../Sprites/ghost_family_3.h"
 #include "../../Sprites/ghost_family_4.h"
 #include "../../Sprites/sharedGhost.h"
+#include "../../Sprites/pijlEnd.h"
 
 
 
@@ -30,7 +31,7 @@ std::vector<Background *> EndScreen::backgrounds() {
 }
 
 std::vector<Sprite *> EndScreen::sprites() {
-    return {ghostFamily1.get(), ghostFamily2.get(), ghostFamily3.get(), ghostFamily4.get()};
+    return {ghostFamily1.get(), ghostFamily2.get(), ghostFamily3.get(), ghostFamily4.get(), pijl.get()};
 }
 
 
@@ -39,7 +40,7 @@ void EndScreen::load() {
     TextStream::instance().setText(std::string("Yay! You made it!"), 1, 1);
     TextStream::instance().setText(std::string("Score: " + std::to_string(score)), 2, 1);
 
-    TextStream::instance().setText(std::string("Press start for the main menu"), 10, 1);
+    TextStream::instance().setText("Back to the main menu", 17, 5);
 
     backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(grasPal, sizeof(grasPal)));
     background = std::unique_ptr<Background>(new Background(1, grasTiles, sizeof(grasTiles), grasBackground, sizeof(grasBackground)));
@@ -51,25 +52,32 @@ void EndScreen::load() {
             .withData(ghost_family_1Tiles, sizeof(ghost_family_1Tiles))
             .withSize(SIZE_64_64)
             .withAnimated(1, 10)
-            .withLocation(10, 10)
+            .withLocation(50, 10)
             .buildPtr();
     ghostFamily2 = spriteBuilder
             .withData(ghost_family_2Tiles, sizeof(ghost_family_2Tiles))
             .withSize(SIZE_64_64)
             .withAnimated(1, 10)
-            .withLocation(74, 10)
+            .withLocation(114, 10)
             .buildPtr();
     ghostFamily3 = spriteBuilder
             .withData(ghost_family_3Tiles, sizeof(ghost_family_3Tiles))
             .withSize(SIZE_64_64)
             .withAnimated(1, 10)
-            .withLocation(10, 74)
+            .withLocation(50, 74)
             .buildPtr();
     ghostFamily4 = spriteBuilder
             .withData(ghost_family_4Tiles, sizeof(ghost_family_4Tiles))
             .withSize(SIZE_64_64)
             .withAnimated(1, 10)
-            .withLocation(74, 74)
+            .withLocation(114, 74)
+            .buildPtr();
+
+    pijl = spriteBuilder
+            .withData(pijlEndTiles, sizeof(pijlEndTiles))
+            .withSize(SIZE_32_32)
+            .withAnimated(1, 10)
+            .withLocation(5, 126)
             .buildPtr();
 
 
