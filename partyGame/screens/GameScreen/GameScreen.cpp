@@ -181,7 +181,7 @@ void GameScreen::tick(u16 keys) {
 
             aanHetGooien = false;
             updatePosition();
-            
+
         }
     }
     else {

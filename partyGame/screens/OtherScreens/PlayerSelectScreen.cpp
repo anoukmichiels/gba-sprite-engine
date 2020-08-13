@@ -29,6 +29,8 @@ std::vector<Sprite *> PlayerSelectScreen::sprites() {return {pijl.get(), spook1.
 
 void PlayerSelectScreen::load() {
     TextStream::instance().setText(std::string("Choose Your player"), 2, 5);
+    TextStream::instance().setText(std::string("Aiofe"), 8, 10);
+    TextStream::instance().setText(std::string("Sebastiaan"), 13, 10);
 
 
     foregroundPalette = std::unique_ptr<ForegroundPaletteManager>(new ForegroundPaletteManager(sharedPal, sizeof(sharedPal)));
@@ -42,13 +44,13 @@ void PlayerSelectScreen::load() {
     spook1 = spriteBuilder
             .withData(wit_spook_1Tiles, sizeof(wit_spook_1Tiles))
             .withSize(SIZE_32_32)
-            .withAnimated(6, 8)
+            .withAnimated(1, 8)
             .withLocation(40, 46)
             .buildPtr();
     spook2 = spriteBuilder
             .withData(wit_spook_2Tiles, sizeof(wit_spook_2Tiles))
             .withSize(SIZE_32_32)
-            .withAnimated(6, 8)
+            .withAnimated(1, 8)
             .withLocation(40, 90)
             .buildPtr();
 
