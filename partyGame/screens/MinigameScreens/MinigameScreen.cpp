@@ -34,7 +34,7 @@ void MinigameScreen::tick(u16 keys) {
 
     if (firstTick) {
         setBegintekst();
-        wachtEven(2000);
+        wachtEven(4000);
         removeTekst();
         firstTick = false;
         lastKeys = keys;
@@ -64,7 +64,7 @@ void MinigameScreen::endScene() {
     engine->dequeueAllSounds();
     setGehaald();
     setEindtekst();
-    wachtEven(5000);
+    wachtEven(4000);
     game->getSpeler()->setScore(minigame->getScore());
     game->getSpeler()->setAlGegooid(false);
     engine->setScene(new GameScreen(engine, game, spriteKeuze));
