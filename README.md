@@ -1,4 +1,15 @@
 
+Little ghosts Sebastiaan and Aoife return from an adventure to find their town in total chaos. Three ghastly ghosts have stolen the pretty white colour of all the other ghosts! Help our little friends get their  colour back by catching Rodrick Red, Gregory Green and Billy Blue. They are hidden in special places around the town that can only be reached through the red, green and blue stones. Find them, but be careful on the way, as wooden boards will catapult you in one direction or the other! When you find the ghosts, catch them with a trap. Once you activate the trap, a box will fall exactly on the place where the imprint is shown. But pay attention, not all three are the same. Rodrick Red is very fast, but not strong. So if something hits him even slightly, he cannot escape. Gregory Green is the strongest of them all. He has to be completely inside the box. Luckily, he isn’t very fast. Billy Blue is in between: if half of his body is hit, you’re good. Once you retrieve all the colours, go to the white stone to join the others. You don’t want to miss out on the party!
+Use the start key to
+    * accept options
+    * roll the dice
+    * catch the bad ghosts
+Use the arrow keys to
+    * select a different option
+    * walk around the board
+
+You can see your progression by looking at the colour of the background ghosts or by looking at the little tiles on the right side of the board.
+
 ## A high-level object-oriented Gameboy Advance sprite engine library
 
 [![Build Status](https://travis-ci.org/wgroeneveld/gba-sprite-engine.svg?branch=master)](https://travis-ci.org/wgroeneveld/gba-sprite-engine)
