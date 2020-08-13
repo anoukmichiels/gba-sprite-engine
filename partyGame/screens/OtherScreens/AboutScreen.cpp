@@ -27,7 +27,7 @@ std::vector<Sprite *> AboutScreen::sprites() { return {};}
 
 void AboutScreen::load() {
 
-    TextStream::instance().setText("About the game", 1, 1);
+    TextStream::instance().setText("HOW TO PLAY", 1, 1);
     TextStream::instance().setText("Use the start key to", 3, 1);
     TextStream::instance().setText(" * accept options", 4, 1);
     TextStream::instance().setText(" * roll the dice", 5, 1);
