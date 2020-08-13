@@ -23,31 +23,24 @@ std::vector<Background *> AboutScreen::backgrounds() {
     return {background.get()};}
 
 
-std::vector<Sprite *> AboutScreen::sprites() { return {spook.get(), pijl.get()};}
+std::vector<Sprite *> AboutScreen::sprites() { return {};}
 
 void AboutScreen::load() {
 
-    TextStream::instance().setText("AboutScreen", 1, 1);
-    TextStream::instance().setText("Verhaaltje", 3, 1);
+    TextStream::instance().setText("About the game", 1, 1);
+    TextStream::instance().setText("Use the start key to", 3, 1);
+    TextStream::instance().setText(" * accept options", 4, 1);
+    TextStream::instance().setText(" * roll the dice", 5, 1);
+    TextStream::instance().setText(" * catch the bad ghosts", 6, 1);
+    TextStream::instance().setText("Use the arrow keys to", 8, 1);
+    TextStream::instance().setText(" * select a different option", 9, 1);
+    TextStream::instance().setText(" * walk around the board", 10, 1);
 
     backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(grasPal, sizeof(grasPal)));
     background = std::unique_ptr<Background>(new Background(1, grasTiles, sizeof(grasTiles), grasBackground, sizeof(grasBackground)));
     background->useMapScreenBlock(16);
 
-    foregroundPalette = std::unique_ptr<ForegroundPaletteManager>(new ForegroundPaletteManager(sharedPal, sizeof(sharedPal)));
-    SpriteBuilder<Sprite> spriteBuilder;
-    pijl = spriteBuilder
-            .withData(pijlTiles, sizeof(pijlTiles))
-            .withSize(SIZE_32_32)
-            .withAnimated(1, 40)
-            .withLocation(5, 46)
-            .buildPtr();
-    spook = spriteBuilder
-            .withData(wit_spook_1Tiles, sizeof(wit_spook_1Tiles))
-            .withSize(SIZE_32_32)
-            .withAnimated(6, 8)
-            .withLocation(12, 56)
-            .buildPtr();
+
 }
 
 void AboutScreen::tick(u16 keys) {
@@ -61,3 +54,6 @@ void AboutScreen::tick(u16 keys) {
     }
     lastKeys = keys;
 }
+
+//Use the arrow keys to walk around the board
+//Use the start key to select options, roll the dice and catch the bad ghosts
