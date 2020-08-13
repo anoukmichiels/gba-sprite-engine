@@ -1,5 +1,7 @@
 
 ## Spectral
+#### of or like a ghost
+#### of or concerning spectra or the spectrum
 
 Little ghosts Sebastiaan and Aoife return from an adventure to find their town in total chaos. Three ghastly ghosts have stolen the pretty white colour of all the other ghosts!
 Help our little ghosts get their friends' colour back by catching Rodrick Red, Gregory Green and Billy Blue. They are hidden in special places around the town that can only be reached through the red, green and blue stones.
@@ -9,17 +11,17 @@ Once you retrieve all the colours, go to the white stone to join the others. You
 
 Use the start key to
 
-    * accept options
+   * accept options
 
-    * roll the dice
+   * roll the dice
 
-    * catch the bad ghosts
+   * catch the bad ghosts
 
 Use the arrow keys to
 
-    * select a different option
+   * select a different option
 
-    * walk around the board
+   * walk around the board
 
 You can see your progression by looking at the colour of the background ghosts or by looking at the little tiles on the right side of the board.
 
