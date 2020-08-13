@@ -22,7 +22,7 @@
 void MainMenuScreen::load() {
     TextStream::instance().setText(std::string("Start Game"), 7, 5);
     TextStream::instance().setText(std::string("How to play"), 10, 5);
-    TextStream::instance().setText(std::string("WELCOME TO SPOOK-Y TOWN"), 2, 3);
+    TextStream::instance().setText(std::string("SPECTRAL"), 2, 3);
 
     foregroundPalette = std::unique_ptr<ForegroundPaletteManager>(new ForegroundPaletteManager(sharedPal, sizeof(sharedPal)));
     SpriteBuilder<Sprite> spriteBuilder;
